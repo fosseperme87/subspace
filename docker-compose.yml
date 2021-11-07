@@ -13,7 +13,7 @@ services:
     - SUBSPACE_HTTP_ADDR=":80"
     - SUBSPACE_NAMESERVERS=1.1.1.1,1.0.0.1
     - SUBSPACE_LISTENPORT=51820
-    - SUBSPACE_THEME=yourfavouritecolour
+    - SUBSPACE_THEME=yourfavouritecolor
    cap_add:
     - NET_ADMIN
    network_mode: "host"
