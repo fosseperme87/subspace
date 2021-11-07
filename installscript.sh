@@ -12,6 +12,8 @@ curl -sSL https://get.docker.com | sh
 
 sudo usermod -aG docker $(whoami)
 
+apt install docker-compose
+
 apt-get remove -y dnsmasq
 
 echo "DNSStubListener=no" >> /etc/systemd/resolved.conf
@@ -37,12 +39,6 @@ echo "ip6table_nat" > /etc/modules-load.d/ip6table_nat.conf
 sysctl -w net.ipv4.ip_forward=1
 
 sysctl -w net.ipv6.conf.all.forwarding=1
-
-apt install docker-compose
-
-apt update
-
-apt upgrade
 
 docker-compose up --detach
 
