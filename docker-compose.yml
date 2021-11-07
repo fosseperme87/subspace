@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  subspace:
+   image: subspacecommunity/subspace:latest
+   container_name: subspace
+   volumes:
+    - /opt/docker/subspace:/data
+   restart: always
+   environment:
+    - SUBSPACE_HTTP_HOST=IPofyourVPS
+    - SUBSPACE_LETSENCRYPT=false
+    - SUBSPACE_HTTP_INSECURE=true
+    - SUBSPACE_HTTP_ADDR=":80"
+    - SUBSPACE_NAMESERVERS=1.1.1.1,1.0.0.1
+    - SUBSPACE_LISTENPORT=51820
+    cap_add:
+    - NET_ADMIN
+   network_mode: "host"
