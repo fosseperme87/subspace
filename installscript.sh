@@ -44,9 +44,7 @@ apt update
 
 apt upgrade
 
-apt install git
-
-docker-compose up --detach
+adocker-compose up --detach
 
 sudo docker start subspace
 
