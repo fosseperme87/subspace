@@ -44,7 +44,7 @@ apt update
 
 apt upgrade
 
-adocker-compose up --detach
+docker-compose up --detach
 
 sudo docker start subspace
 
